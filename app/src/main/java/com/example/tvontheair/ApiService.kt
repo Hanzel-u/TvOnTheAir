@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 
-val BASE_URL = "https://api.themoviedb.org/3/"
+val BASE_URL = "https://api.themoviedb.org/3/tv/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -20,9 +20,8 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface ApiService {
-
     @GET("on_the_air?api_key=86193b53da843b3ac3096b6bf0da08f4&language=es-es&page=1")
-    fun getTvsOnTheAir(): Call<List<Air>>
+    fun getTvsOnTheAir(): Call<onTheAir>
 }
 
 object Api {

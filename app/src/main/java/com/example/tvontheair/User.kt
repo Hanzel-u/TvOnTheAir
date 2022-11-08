@@ -15,7 +15,7 @@ data class Air(
 
 data class onTheAir(
     val page: Int,
-    val results: List<Result>,
+    val results: List<Air>,
 )
 
 interface Result {

@@ -18,24 +18,24 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         Api.retrofitService.getTvsOnTheAir().enqueue(
-            object: Callback<List<Air>> {
-                override fun onResponse(call: Call<List<Air>>, response: Response<List<Air>>) {
+            object: Callback<onTheAir> {
+                override fun onResponse(call: Call<onTheAir>, response: Response<onTheAir>) {
                     Log.i("Retrofit", response.body().toString())
-
+                    Log.i("SI ENTRE A Retrofit", response.body().toString())
                     response.body()?.let {
                         configureUsersList(it)
                     }
                 }
 
-                override fun onFailure(call: Call<List<Air>>, t: Throwable) {
+                override fun onFailure(call: Call<onTheAir>, t: Throwable) {
                     Log.i("Retrofit", t.message.toString())
                 }
             }
         )
     }
 
-    fun configureUsersList(data: List<Air>) {
-        val adapter = UserAdapter(dataSet = data.toTypedArray())
+    fun configureUsersList(data: onTheAir) {
+        val adapter = UserAdapter(dataSet = data.results.toTypedArray())
 
         val recyclerView: RecyclerView = findViewById(R.id.users_recyclerView)
 
