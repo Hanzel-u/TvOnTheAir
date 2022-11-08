@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        Api.retrofitService.getUsers().enqueue(
-            object: Callback<List<User>> {
-                override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+        Api.retrofitService.getTvsOnTheAir().enqueue(
+            object: Callback<List<Air>> {
+                override fun onResponse(call: Call<List<Air>>, response: Response<List<Air>>) {
                     Log.i("Retrofit", response.body().toString())
 
                     response.body()?.let {
@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onFailure(call: Call<List<User>>, t: Throwable) {
+                override fun onFailure(call: Call<List<Air>>, t: Throwable) {
                     Log.i("Retrofit", t.message.toString())
                 }
             }
         )
     }
 
-    fun configureUsersList(data: List<User>) {
+    fun configureUsersList(data: List<Air>) {
         val adapter = UserAdapter(dataSet = data.toTypedArray())
 
         val recyclerView: RecyclerView = findViewById(R.id.users_recyclerView)

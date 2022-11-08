@@ -8,3 +8,22 @@ data class User(
     val phone: String,
     val website: String,
 )
+
+data class Air(
+    val name: String
+)
+
+data class onTheAir(
+    val page: Int,
+    val results: List<Result>,
+)
+
+interface Result {
+    val poster_path: String
+    val popularity: Int
+    val id: Int
+    val backdrop_path: String
+    val vote_average: Double
+    val overview: String
+    val first_air_date: String
+}
