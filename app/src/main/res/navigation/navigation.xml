@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/series">
+    <fragment
+        android:id="@+id/series"
+        android:name="com.example.tvontheair.series"
+        android:label="fragment_series"
+        />
+</navigation>
