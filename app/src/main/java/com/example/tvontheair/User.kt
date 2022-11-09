@@ -10,7 +10,9 @@ data class User(
 )
 
 data class Air(
-    val name: String
+    val name: String,
+    val id: Int,
+    val backdrop_path: String?
 )
 
 data class onTheAir(

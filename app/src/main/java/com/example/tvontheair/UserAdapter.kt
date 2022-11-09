@@ -13,8 +13,11 @@ class UserAdapter(private val dataSet: Array<Air>) : RecyclerView.Adapter<UserVi
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        holder.nameTextView.text = dataSet[position].name
+        //holder.nameTextView.text = dataSet[position].name
         //holder.emailTextView.text = dataSet[position].email
+
+        val item = dataSet[position]
+        holder.render(item)
     }
 
     override fun getItemCount(): Int {

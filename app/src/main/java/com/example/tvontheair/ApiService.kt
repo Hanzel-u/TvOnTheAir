@@ -9,6 +9,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
 
 val BASE_URL = "https://api.themoviedb.org/3/tv/"
+val BASE_URL_IMG = "https://image.tmdb.org/t/p/original"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())

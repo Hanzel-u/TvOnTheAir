@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             object: Callback<onTheAir> {
                 override fun onResponse(call: Call<onTheAir>, response: Response<onTheAir>) {
                     Log.i("Retrofit", response.body().toString())
-                    Log.i("SI ENTRE A Retrofit", response.body().toString())
                     response.body()?.let {
                         configureUsersList(it)
                     }
