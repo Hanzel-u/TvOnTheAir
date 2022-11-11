@@ -37,7 +37,7 @@ class UserAdapter(
 
         startButton.setOnClickListener {
             //val action = item.name //UserAdapterDirections.actionUserAdapterToTvDetailFragment()
-            //it.findNavController().navigate(R.id.action_series_to_tvDetailFragment)
+            //it.findNavController().n avigate(R.id.action_series_to_tvDetailFragment)
             //onTap(item.name)
             Log.i("Retrofit tocaste: ", item.name)
             //it.findNavController().navigate(R.id.action_series_to_tvDetailFragment)
