@@ -27,7 +27,7 @@ interface ApiService {
     @GET("on_the_air?api_key=${KEY}=es-es")
     fun getTvsOnTheAir(): Call<ShowsOnTheAirResponse>
 
-    @GET("tv/{id}?api_key=${KEY}")
+    @GET("{id}?api_key=${KEY}")
     fun getTvShowByID(@Path("id") id: Int): Call<TvShowResponse>
 }
 

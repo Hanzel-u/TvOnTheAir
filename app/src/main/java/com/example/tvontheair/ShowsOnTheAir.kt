@@ -1,9 +1,9 @@
 package com.example.tvontheair
 
 data class Show(
-    val name: String,
     val id: Int,
-    val backdrop_path: String?
+    val name: String,
+    val poster_path: String?
 )
 
 data class ShowsOnTheAirResponse(
@@ -26,6 +26,7 @@ data class TvShowResponse (
     val number_of_seasons: Int,
     val overview: String,
     val vote_average: Double,
+    val poster_path: String?
 )
 
 data class CreatedBy (
