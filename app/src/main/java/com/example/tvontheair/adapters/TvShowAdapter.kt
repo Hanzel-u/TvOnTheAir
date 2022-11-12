@@ -22,7 +22,6 @@ class TvShowAdapter(
         val item = dataSet[position]
 
         holder.setTVShow(item)
-        holder.nameTextView.text = dataSet[position].name
 
         holder.itemView.setOnClickListener {
             onClick(item.id)

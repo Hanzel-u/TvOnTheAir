@@ -9,7 +9,7 @@ import com.example.tvontheair.R
 import com.example.tvontheair.Show
 
 class TvShowViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val nameTextView: TextView = itemView.findViewById(R.id.name_textView)
+    //val nameTextView: TextView = itemView.findViewById(R.id.name_textView)
     val posterPathImageView: ImageView = itemView.findViewById(R.id.tvShowImage)
 
     fun setTVShow(tvShow: Show){

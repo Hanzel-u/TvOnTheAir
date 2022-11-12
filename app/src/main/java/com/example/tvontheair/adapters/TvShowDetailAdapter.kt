@@ -24,6 +24,16 @@ class TvShowDetailAdapter (
         holder.showName_textView.text = dataSet.name
         holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
         holder.overview_textView.text = dataSet.overview
+
+        var genre = ""
+        for (i in dataSet.genres.indices) {
+            genre += dataSet.genres[i].name
+            if (i != dataSet.genres.size - 1) {
+                genre += ", "
+            }
+        }
+
+        holder.genre_textView.text = genre
     }
 
     override fun getItemCount(): Int {

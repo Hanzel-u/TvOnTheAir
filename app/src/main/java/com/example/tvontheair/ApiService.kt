@@ -10,7 +10,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 const val BASE_URL = "https://api.themoviedb.org/3/tv/"
-const val KEY = "86193b53da843b3ac3096b6bf0da08f4&language"
+const val KEY = "86193b53da843b3ac3096b6bf0da08f4"
 
 //Instancia de moshi
 private val moshi = Moshi.Builder()
@@ -24,10 +24,10 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface ApiService {
-    @GET("on_the_air?api_key=${KEY}=es-es")
+    @GET("on_the_air?api_key=${KEY}&language=es-es")
     fun getTvsOnTheAir(): Call<ShowsOnTheAirResponse>
 
-    @GET("{id}?api_key=${KEY}")
+    @GET("{id}?api_key=${KEY}&language=es-es")
     fun getTvShowByID(@Path("id") id: Int): Call<TvShowResponse>
 }
 
