@@ -28,24 +28,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/movie_poster_card"
-                android:layout_width="134dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="200dp"
-                app:cardCornerRadius="4dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/series_backdrop">
-
-                <ImageView
-                    android:id="@+id/ShowPoster"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </androidx.cardview.widget.CardView>
-
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/backdrop_guideline"
                 android:layout_width="wrap_content"
@@ -55,39 +37,37 @@
 
             <TextView
                 android:id="@+id/showName_textView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginTop="28dp"
                 android:fontFamily="sans-serif"
                 android:text="title"
                 android:textColor="@android:color/white"
-                android:textSize="24sp"
+                android:textSize="48sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/showEpisodes_textView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/movie_poster_card"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/series_backdrop" />
 
             <TextView
                 android:id="@+id/Episodios_textView"
                 android:layout_width="108dp"
                 android:layout_height="29dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif"
                 android:text="Episodios:"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                app:layout_constraintStart_toEndOf="@+id/movie_poster_card"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/backdrop_guideline" />
 
             <TextView
                 android:id="@+id/showEpisodes_textView"
-                android:layout_width="210dp"
-                android:layout_height="31dp"
+                android:layout_width="140dp"
+                android:layout_height="29dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif"
                 android:text="Episodios"
@@ -98,36 +78,72 @@
                 app:layout_constraintTop_toTopOf="@+id/backdrop_guideline" />
 
             <TextView
-                android:id="@+id/overview_textView"
-                android:layout_width="377dp"
-                android:layout_height="275dp"
+                android:id="@+id/ultimoEpisodio_textView"
+                android:layout_width="108dp"
+                android:layout_height="29dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="72dp"
                 android:fontFamily="sans-serif"
-                android:text="Overview"
+                android:text="Ultimo episodio:"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/movie_poster_card" />
+                app:layout_constraintTop_toTopOf="@+id/backdrop_guideline" />
 
+            <TextView
+                android:id="@+id/showUltimoEpisodio_textView"
+                android:layout_width="270dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="72dp"
+                android:fontFamily="sans-serif"
+                android:text="Ultimo"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/ultimoEpisodio_textView"
+                app:layout_constraintTop_toTopOf="@+id/backdrop_guideline" />
+
+            <TextView
+                android:id="@+id/genre_textView"
+                android:layout_width="417dp"
+                android:layout_height="19dp"
+                android:layout_marginBottom="36dp"
+                android:text="Generos"
+                android:textAlignment="center"
+                android:textColor="@color/card_text"
+                app:layout_constraintBottom_toTopOf="@+id/overview_textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/overview_textView"
+                app:layout_constraintTop_toTopOf="@+id/backdrop_guideline"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/overview_textView"
+                android:layout_width="377dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="56dp"
+                android:background="@android:color/darker_gray"
+                android:fontFamily="sans-serif"
+                android:text="Overview"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/movie_poster_title_barrier"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom" />
-
-            <TextView
-                android:id="@+id/genre_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/card_text"
-                app:layout_constraintBottom_toTopOf="@+id/overview_textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/movie_poster_card"
-                app:layout_constraintTop_toBottomOf="@+id/Episodios_textView" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

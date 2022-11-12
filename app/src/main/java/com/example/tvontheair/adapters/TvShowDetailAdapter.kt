@@ -24,6 +24,7 @@ class TvShowDetailAdapter (
         holder.showName_textView.text = dataSet.name
         holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
         holder.overview_textView.text = dataSet.overview
+        holder.showUltimoEpisodio_textView.text = dataSet.last_air_date
 
         var genre = ""
         for (i in dataSet.genres.indices) {
